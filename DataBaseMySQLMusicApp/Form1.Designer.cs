@@ -32,12 +32,14 @@
             dataGridView1 = new DataGridView();
             button2 = new Button();
             textBox1 = new TextBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(12, 28);
+            button1.Location = new Point(24, 70);
             button1.Name = "button1";
             button1.Size = new Size(137, 23);
             button1.TabIndex = 0;
@@ -48,14 +50,15 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(142, 70);
+            dataGridView1.Location = new Point(223, 70);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(635, 325);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // button2
             // 
-            button2.Location = new Point(553, 27);
+            button2.Location = new Point(811, 27);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 2;
@@ -65,16 +68,26 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(214, 28);
+            textBox1.Location = new Point(331, 28);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 23);
+            textBox1.Size = new Size(408, 23);
             textBox1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(12, 135);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(185, 175);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(898, 478);
+            Controls.Add(pictureBox1);
             Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(dataGridView1);
@@ -82,6 +95,7 @@
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -92,5 +106,6 @@
         private DataGridView dataGridView1;
         private Button button2;
         private TextBox textBox1;
+        private PictureBox pictureBox1;
     }
 }
