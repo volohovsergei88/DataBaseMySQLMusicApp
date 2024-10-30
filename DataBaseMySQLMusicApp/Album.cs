@@ -14,5 +14,6 @@ namespace DataBaseMySQLMusicApp
         public int Year { get; set; }
         public string  ImageUrl { get; set; }
         public string  Description { get; set; }
+        public List<Track> Tracks { get; set; }
     }
 }
